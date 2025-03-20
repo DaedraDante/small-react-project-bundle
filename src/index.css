@@ -1,0 +1,29 @@
+
+.age-calc-title {
+  text-align: center;
+  margin-top: 16rem;
+}
+
+.calc-container {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  width: 36rem;
+  height: 16rem;
+  border: 1px solid black;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.calc-container input {
+  width: 10rem;
+  margin: 2rem;
+  text-align: center;
+}
+.calc-container button {
+  width: 10rem;
+  height: 1.8rem;
+}
+.calc-container p {
+  font-size: 3rem;
+}
