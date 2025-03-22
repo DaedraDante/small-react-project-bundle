@@ -4,12 +4,14 @@ import TipCalc from './TipCalc'
 function App() {
   let [activeApp, setActiveApp] = useState("")
   const btnsDiv = document.getElementById("btns-div")
+
   const activeAppIsAgeCalc = () => {
     setActiveApp("AgeCalc");
   }
   const activeAppIsTipCalc = () => {
     setActiveApp("TipCalc");
   }
+
 
   const changeScreen = () => {
     if(activeApp === "AgeCalc") {

@@ -11,11 +11,11 @@ function TipCalc() {
 
     return(
         <>
-            <h1>Tip Calculator</h1>
-            <div>
+            <h1 className="tipCalc-title">Tip Calculator</h1>
+            <div className="tipCalc-container">
                 <input placeholder="Enter pay here" onChange={handleMoneyInput}/>
-                <p>You paying {orderCost}</p>
-                <p>You gotta tip:{orderCost / 10}</p>
+                <p>Your bill is {orderCost} dollars</p>
+                <p>You gotta tip {orderCost / 10} dollars</p>
             </div>  
         </>
     )

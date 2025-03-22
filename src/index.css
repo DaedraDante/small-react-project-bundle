@@ -1,4 +1,20 @@
+:root {
+  --backgroundColor: #f6fbfa;
+  --textColor:#070c0b;
+  --primaryColor: #4ab6a3;
+  --secondaryColor: #94dbce;
+  --accentColor: #6bd6c3;
+  --darkBackgroundColor: #050a09;
+  --darkTextColor:#f2f7f6;
+  --darkPrimaryColor: #49b6a2;
+  --darkSecondaryColor: #246b5e;
+  --darkAccentColor: #299480;
+}
 
+body {
+  background: linear-gradient(to right, var(--primaryColor),var(--secondaryColor)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+}
 .age-calc-title {
   text-align: center;
   margin-top: 16rem;
@@ -26,4 +42,27 @@
 }
 .calc-container p {
   font-size: 3rem;
+}
+
+.ageCalc-return-btn {
+  width: 12rem;
+  height: 3rem;
+  margin-left: 43%;
+  margin-top: 4rem;
+}
+
+.tipCalc-title {
+  margin: 0 auto;
+  margin-top: 14rem;
+  text-align: center;
+
+}
+.tipCalc-container {
+  margin: 0 auto;
+  width: 26rem;
+  height: 14rem;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }

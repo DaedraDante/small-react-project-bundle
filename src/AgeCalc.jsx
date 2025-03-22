@@ -1,7 +1,7 @@
 import { useState } from "react";
 import App from "./App";
 
-function AgeCalc({activeApp , setActiveApp, btnsDiv}) {
+function AgeCalc({activeApp , setActiveApp}) {
 
     const [currentYear, setCurrentYear] = useState(2025);
     const [birthYear, setBirthYear] = useState("");
@@ -15,7 +15,7 @@ function AgeCalc({activeApp , setActiveApp, btnsDiv}) {
         setBirthYear(e.target.value);
     }
     const calculateAge = () => {
-        setUserAge(currentYear - birthYear);
+            setUserAge(`You are ${currentYear - birthYear} years old`);
     }
 
     return(
@@ -24,10 +24,9 @@ function AgeCalc({activeApp , setActiveApp, btnsDiv}) {
             <div className="calc-container">
                 <input type="number" name="" placeholder="Input your birth year!" onChange={handleBirthYearInput}/>
                 <button onClick={calculateAge}>Click to calculate age!</button>
-                <p>You're: {userAge}</p>
-                <p>The active app is {activeApp}</p>
+                <p>{userAge}</p>
             </div>
-            <button id="returnToMenuBtn" onClick={returnToMenu}>Return to menu</button>
+            <button className="ageCalc-return-btn" id="returnToMenuBtn" onClick={returnToMenu}>Return to menu</button>
         </>
     )
 }
