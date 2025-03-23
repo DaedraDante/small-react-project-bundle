@@ -21,10 +21,10 @@ function AgeCalc({activeApp , setActiveApp}) {
     return(
         <>
             <h1 className="age-calc-title">This is an Age Calculator</h1>
-            <div className="calc-container">
+            <div className="ageCalc-container">
                 <input type="number" name="" placeholder="Input your birth year!" onChange={handleBirthYearInput}/>
-                <button onClick={calculateAge} onKeyUp={calculateAge}>Click to calculate age!</button>
                 <p>{userAge}</p>
+                <button onClick={calculateAge} className="app-primary-btn">Click to calculate age!</button>
             </div>
             <button className="ageCalc-return-btn" id="returnToMenuBtn" onClick={returnToMenu}>Return to menu</button>
         </>

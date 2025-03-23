@@ -29,12 +29,13 @@ function App() {
   
   return (
     <>
-      <div className='div-for-section-btns' id="btns-div">     
-        <button onClick={activeAppIsAgeCalc}>Open Age Calculator</button>
-        <button onClick={activeAppIsTipCalc}>Open Tip Calculator</button>
-        <button>Open BMI Calculator</button>
-        <button>the active app is {activeApp}</button>
-        <button>Open Age Calculator</button>
+      <div className='div-for-menu-btns' id="btns-div">     
+        <button onClick={activeAppIsAgeCalc} className='app-primary-btn app-main-menu-btn'>Open Age Calculator</button>
+        <button onClick={activeAppIsTipCalc} className='app-primary-btn app-main-menu-btn'>Open Tip Calculator</button>
+        <button className='app-primary-btn app-main-menu-btn'>Open BMI Calculator</button>
+        <button className='app-primary-btn app-main-menu-btn'>the active app is {activeApp}</button>
+        <button className='app-primary-btn app-main-menu-btn'>Open Age Calculator</button>
+
       </div>
       {changeScreen()}
     </>
