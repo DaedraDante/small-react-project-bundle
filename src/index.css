@@ -12,7 +12,7 @@
 }
 
 body {
-  background: linear-gradient(to right, var(--primaryColor),var(--secondaryColor)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: var(--backgroundColor);
   
 }
 .age-calc-title {
@@ -21,33 +21,44 @@ body {
 }
 
 .calc-container {
+  background: linear-gradient(to right, var(--accentColor),var(--primaryColor));
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  width: 36rem;
-  height: 16rem;
-  border: 1px solid black;
+  width: 44rem;
+  height: 24rem;
+  border: 5px solid var(--backgroundColor);
+  border-radius: 10px;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
 .calc-container input {
-  width: 10rem;
+  width: 30rem;
+  height: 4rem;
+  font-size: 2rem;
   margin: 2rem;
+  margin-top: -8rem;
   text-align: center;
+  color:rgb(231, 16, 177);
 }
 .calc-container button {
-  width: 10rem;
-  height: 1.8rem;
+  width: 15rem;
+  height: 3rem;
 }
 .calc-container p {
-  font-size: 3rem;
+  font-family: 'Times New Roman', Times, serif;
+  color:rgb(231, 16, 177);
+  margin-top:16rem;
+  position: fixed;
+  font-size: 4rem;
 }
 
 .ageCalc-return-btn {
-  width: 12rem;
-  height: 3rem;
-  margin-left: 43%;
+  background: linear-gradient(to right, var(--accentColor),var(--primaryColor));
+  width: 22rem;
+  height: 4rem;
+  margin-left: 40%;
   margin-top: 4rem;
 }
 

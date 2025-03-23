@@ -15,7 +15,7 @@ function AgeCalc({activeApp , setActiveApp}) {
         setBirthYear(e.target.value);
     }
     const calculateAge = () => {
-            setUserAge(`You are ${currentYear - birthYear} years old`);
+        setUserAge(`You are ${currentYear - birthYear} years old`);
     }
 
     return(
@@ -23,7 +23,7 @@ function AgeCalc({activeApp , setActiveApp}) {
             <h1 className="age-calc-title">This is an Age Calculator</h1>
             <div className="calc-container">
                 <input type="number" name="" placeholder="Input your birth year!" onChange={handleBirthYearInput}/>
-                <button onClick={calculateAge}>Click to calculate age!</button>
+                <button onClick={calculateAge} onKeyUp={calculateAge}>Click to calculate age!</button>
                 <p>{userAge}</p>
             </div>
             <button className="ageCalc-return-btn" id="returnToMenuBtn" onClick={returnToMenu}>Return to menu</button>
