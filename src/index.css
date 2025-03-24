@@ -9,6 +9,7 @@
   --darkPrimaryColor: #49b6a2;
   --darkSecondaryColor: #246b5e;
   --darkAccentColor: #299480;
+  font-family: 'Times New Roman', Times, serif;
 }
 body {
   background: radial-gradient(var(--primaryColor),var(--secondaryColor));
@@ -113,11 +114,46 @@ body {
   text-align: center;
 }
 .tipCalc-container {
+  background: linear-gradient(to right, var(--accentColor),var(--primaryColor));
   margin: 0 auto;
-  width: 26rem;
-  height: 14rem;
-  border: 1px solid black;
   display: flex;
   flex-direction: column;
+  width: 44rem;
+  height: 24rem;
+  border: 5px solid var(--backgroundColor);
+  border-radius: 10px;
   justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.tipCalc-input {
+  width: 30rem;
+  height: 4rem;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 2rem;
+  text-align: center;
+  color:rgb(231, 16, 177);
+  border: var(--backgroundColor);
+  border-radius: 10px;
+}
+.tipCalc-p {
+  font-family: 'Times New Roman', Times, serif;
+  color: var(--backgroundColor);
+  font-size: 3.5rem;
+}
+
+
+.BMICalc-container {
+  background: linear-gradient(to right, var(--accentColor),var(--primaryColor));
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  width: 44rem;
+  height: 24rem;
+  border: 5px solid var(--backgroundColor);
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }

@@ -1,6 +1,7 @@
 import { act, useState } from 'react'
 import AgeCalc from './AgeCalc'
 import TipCalc from './TipCalc'
+import BMICalc from './BMICalc'
 function App() {
   let [activeApp, setActiveApp] = useState("")
   const btnsDiv = document.getElementById("btns-div")
@@ -11,7 +12,9 @@ function App() {
   const activeAppIsTipCalc = () => {
     setActiveApp("TipCalc");
   }
-
+  const activeAppIsBMICalc = () => {
+    setActiveApp("BMICalc");
+  }
 
   const changeScreen = () => {
     if(activeApp === "AgeCalc") {
@@ -21,6 +24,10 @@ function App() {
     }else if(activeApp === "TipCalc") {
       btnsDiv.style.display = "none";
       return <TipCalc activeApp={activeApp} 
+      setActiveApp={setActiveApp} />
+    }else if(activeApp === "BMICalc") {
+      btnsDiv.style.display = "none";
+      return <BMICalc activeApp={activeApp}
       setActiveApp={setActiveApp} />
     }else if(activeApp === "MainMenu") {
       btnsDiv.style.display = "block";
@@ -32,7 +39,7 @@ function App() {
       <div className='div-for-menu-btns' id="btns-div">     
         <button onClick={activeAppIsAgeCalc} className='app-primary-btn app-main-menu-btn'>Open Age Calculator</button>
         <button onClick={activeAppIsTipCalc} className='app-primary-btn app-main-menu-btn'>Open Tip Calculator</button>
-        <button className='app-primary-btn app-main-menu-btn'>Open BMI Calculator</button>
+        <button onClick={activeAppIsBMICalc} className='app-primary-btn app-main-menu-btn'>Open BMI Calculator</button>
         <button className='app-primary-btn app-main-menu-btn'>the active app is {activeApp}</button>
         <button className='app-primary-btn app-main-menu-btn'>Open Age Calculator</button>
 

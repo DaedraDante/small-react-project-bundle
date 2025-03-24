@@ -17,7 +17,7 @@ function AgeCalc({activeApp , setActiveApp}) {
     const calculateAge = () => {
         setUserAge(`You are ${currentYear - birthYear} years old`);
     }
-
+    
     return(
         <>
             <h1 className="age-calc-title">This is an Age Calculator</h1>
