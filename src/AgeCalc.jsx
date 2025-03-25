@@ -20,7 +20,7 @@ function AgeCalc({activeApp , setActiveApp}) {
     
     return(
         <>
-            <h1 className="age-calc-title">This is an Age Calculator</h1>
+            <h1 className="appTitle">Age Calculator</h1>
             <div className="ageCalc-container">
                 <input type="number" name="" placeholder="Input your birth year!" onChange={handleBirthYearInput}/>
                 <p>{userAge}</p>

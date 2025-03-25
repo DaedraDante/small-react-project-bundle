@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 
-function BMICalc() {
+function BMICalc({activeApp, setActiveApp}) {
 
     const [userHeight, setUserHeight] = useState("");
     const [userWeight, setUserWeight] = useState("");
@@ -16,21 +16,30 @@ function BMICalc() {
     const calculateBMI = () => {
         console.log(userHeight);
         console.log(userWeight);
-        setBMIValue(userWeight / ((userHeight/100) * (userHeight/100)))
+        if(userHeight === "" || userWeight === "") {
+            alert("Please complete both fields before proceeding")
+        }else if(userHeight <= 0 || userWeight <= 0) {
+            alert("Please input positive values")
+        }else{
+            setBMIValue((userWeight / ((userHeight/100) * (userHeight/100))).toFixed(2))
+        }
+       
+    }
+    const returnToMenu = () => {
+        setActiveApp("MainMenu")
     }
 
 
     return(
         <>
-            <h1>BMI Calculator</h1>
+            <h1 className="appTitle">BMI Calculator</h1>
             <div className="BMICalc-container">
-                <input type="number" placeholder="Your Height" onChange={(e) => {handleHeightInput(e); }}/>
-                <input type="number" placeholder="Your Weight" onChange={(e) => {handleWeightInput(e); }}/>
-                <p>{userHeight}</p>
-                <p>{userWeight}</p>
-                <button onClick={calculateBMI}>Calculate BMI</button>
-                <p>Your BMI is {BMIValue}</p>
+                <input type="number" placeholder="Your Height (cm)" onChange={(e) => {handleHeightInput(e); }} className="appInput BMICalc-input" />
+                <input type="number" placeholder="Your Weight (kg)" onChange={(e) => {handleWeightInput(e); }} className="appInput BMICalc-input" />
+                <button onClick={calculateBMI} className="app-primary-btn BMICalc-button">Calculate BMI</button>
+                <p className="app-text">Your BMI is <span style={{fontWeight:"550"}}>{BMIValue}</span></p>
             </div>
+            <button onClick={returnToMenu} className="ageCalc-return-btn">Return to menu</button>
         </>
     )
 }

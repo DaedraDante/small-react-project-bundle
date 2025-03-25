@@ -14,7 +14,7 @@ function TipCalc({activeApp, setActiveApp}) {
 
     return(
         <>
-            <h1 className="tipCalc-title">Tip Calculator</h1>
+            <h1 className="appTitle">Tip Calculator</h1>
             <div className="tipCalc-container">
                 <input placeholder="Enter pay here" onChange={handleMoneyInput}
                 className="tipCalc-input" type="number"/>
