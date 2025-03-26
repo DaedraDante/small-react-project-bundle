@@ -37,7 +37,7 @@ function BMICalc({activeApp, setActiveApp}) {
                 <input type="number" placeholder="Your Height (cm)" onChange={(e) => {handleHeightInput(e); }} className="appInput BMICalc-input" />
                 <input type="number" placeholder="Your Weight (kg)" onChange={(e) => {handleWeightInput(e); }} className="appInput BMICalc-input" />
                 <button onClick={calculateBMI} className="app-primary-btn BMICalc-button">Calculate BMI</button>
-                <p className="app-text">Your BMI is <span style={{fontWeight:"550"}}>{BMIValue}</span></p>
+                <p className="app-text" style={{marginTop:"20rem"}}>Your BMI is <span style={{fontWeight:"550"}}>{BMIValue}</span></p>
             </div>
             <button onClick={returnToMenu} className="ageCalc-return-btn">Return to menu</button>
         </>

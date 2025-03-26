@@ -15,7 +15,9 @@ function AgeCalc({activeApp , setActiveApp}) {
         setBirthYear(e.target.value);
     }
     const calculateAge = () => {
-        setUserAge(`You are ${currentYear - birthYear} years old`);
+      setUserAge(`You are ${currentYear - birthYear} years old`);
+
+   
     }
     
     return(

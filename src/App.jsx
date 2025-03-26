@@ -40,8 +40,8 @@ function App() {
         <button onClick={activeAppIsAgeCalc} className='app-primary-btn app-main-menu-btn'>Open Age Calculator</button>
         <button onClick={activeAppIsTipCalc} className='app-primary-btn app-main-menu-btn'>Open Tip Calculator</button>
         <button onClick={activeAppIsBMICalc} className='app-primary-btn app-main-menu-btn'>Open BMI Calculator</button>
-        <button className='app-primary-btn app-main-menu-btn'>the active app is {activeApp}</button>
-        <button className='app-primary-btn app-main-menu-btn'>Open Age Calculator</button>
+        <button className='app-primary-btn app-main-menu-btn'>Open Simple To-Do List</button>
+        <button className='app-primary-btn app-main-menu-btn'>Open Simple Weather App</button>
 
       </div>
       {changeScreen()}
