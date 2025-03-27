@@ -16,6 +16,10 @@ function App() {
     setActiveApp("BMICalc");
   }
 
+
+  const changeTheme = () => {
+    alert("Changed Theme");
+  }
   const changeScreen = () => {
     if(activeApp === "AgeCalc") {
       btnsDiv.style.display = "none";
@@ -44,6 +48,7 @@ function App() {
         <button className='app-primary-btn app-main-menu-btn'>Open Simple Weather App</button>
 
       </div>
+      <button onClick={changeTheme}>Change Theme</button>
       {changeScreen()}
     </>
   )
