@@ -188,3 +188,24 @@ body {
 .BMICalc-button {
   margin-top: 3rem;
 }
+
+
+.to-do-inputs {
+  margin-top: 12rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.to-do-task-list {
+  margin-top: 8rem;
+
+  border: 2px solid var(--backgroundColor);
+  border-radius: 10px;
+  color: var(--darkTextColor);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-items: center;
+}

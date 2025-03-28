@@ -2,6 +2,7 @@ import { act, useState } from 'react'
 import AgeCalc from './AgeCalc'
 import TipCalc from './TipCalc'
 import BMICalc from './BMICalc'
+import ToDoList from './ToDoList'
 function App() {
   let [activeApp, setActiveApp] = useState("")
   const btnsDiv = document.getElementById("btns-div")
@@ -15,7 +16,9 @@ function App() {
   const activeAppIsBMICalc = () => {
     setActiveApp("BMICalc");
   }
-
+  const activeAppIsToDoList = () => {
+    setActiveApp("ToDoList");
+  }
 
   const changeTheme = () => {
     alert("Changed Theme");
@@ -33,6 +36,10 @@ function App() {
       btnsDiv.style.display = "none";
       return <BMICalc activeApp={activeApp}
       setActiveApp={setActiveApp} />
+    }else if(activeApp === "ToDoList") {
+      btnsDiv.style.display = "none";
+      return <ToDoList activeApp={activeApp} 
+      setActiveApp={setActiveApp} />
     }else if(activeApp === "MainMenu") {
       btnsDiv.style.display = "block";
     }
@@ -44,7 +51,7 @@ function App() {
         <button onClick={activeAppIsAgeCalc} className='app-primary-btn app-main-menu-btn'>Open Age Calculator</button>
         <button onClick={activeAppIsTipCalc} className='app-primary-btn app-main-menu-btn'>Open Tip Calculator</button>
         <button onClick={activeAppIsBMICalc} className='app-primary-btn app-main-menu-btn'>Open BMI Calculator</button>
-        <button className='app-primary-btn app-main-menu-btn'>Open Simple To-Do List</button>
+        <button onClick={activeAppIsToDoList} className='app-primary-btn app-main-menu-btn'>Open Simple To-Do List</button>
         <button className='app-primary-btn app-main-menu-btn'>Open Simple Weather App</button>
 
       </div>
