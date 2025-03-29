@@ -2,7 +2,7 @@ import { useState } from "react";
 
 
 
-function ToDoList() {
+function ToDoList({activeApp,setActiveApp}) {
 
     const [taskList, setTaskList] = useState(["a","b"]);
     const [currentTaskItem,setCurrentTaskItem] = useState("");
@@ -31,6 +31,10 @@ function ToDoList() {
           )
         })
     }
+
+    const returnToMenu = () => {
+        setActiveApp("MainMenu")
+    }
 //<p>{taskItem} <button onClick={removeTaskFromArray}>remove</button></p>
 
     return (
@@ -44,7 +48,7 @@ function ToDoList() {
                 <div className="to-do-task-list">
                     {renderArray()}
                 </div>
-                
+                <button onClick={returnToMenu} className="app-button" style={{textAlign:"center"}}>Return to menu</button>
             </div>
         </>
     )
